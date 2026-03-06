@@ -1,3 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #00f0ff;
+  --color-accent-hover: #00d4ff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0f7ff;
+  --color-bg-dark: #000000;
+  --color-bg-darker: #0a0a0a;
+}
+
+:root {
+  --accent: var(--color-accent);
+  --accent-hover: var(--color-accent-hover);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --bg-dark: var(--color-bg-dark);
+  --bg-darker: var(--color-bg-darker);
+}
+
 body {
   background: linear-gradient(
     270deg,
@@ -19,4 +39,35 @@ body {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid var(--accent);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: 
+    typing 4s steps(40, end) forwards,
+    blink-caret 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent); }
+}
+
+.text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+.border-accent { border-color: var(--accent); }
+.hover\:bg-accent-hover:hover { background-color: var(--accent-hover); }
+
+.section-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
 }
