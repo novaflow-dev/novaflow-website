@@ -1,56 +1,4 @@
-@import "tailwindcss";
-
-@theme {
-  --color-accent: #00f0ff;
-  --color-accent-hover: #00d4ff;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #e0f7ff;
-  --color-bg-dark: #000000;
-  --color-bg-darker: #0a0a0a;
-}
-
-:root {
-  --accent: var(--color-accent);
-  --accent-hover: var(--color-accent-hover);
-  --text-primary: var(--color-text-primary);
-  --text-secondary: var(--color-text-secondary);
-  --bg-dark: var(--color-bg-dark);
-  --bg-darker: var(--color-bg-darker);
-}
-
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-}
-
-.typewriter {
-  overflow: hidden;
-  border-right: 0.15em solid var(--accent);
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.05em;
-  animation: 
-    typing 4s steps(40, end) forwards,
-    blink-caret 0.8s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--accent); }
-}
-
-.text-accent { color: var(--accent); }
-.bg-accent { background-color: var(--accent); }
-.border-accent { border-color: var(--accent); }
-.hover\:bg-accent-hover:hover { background-color: var(--accent-hover); }
-
-/* Animated gradient background – subtle neon flow */
-.animated-gradient-bg {
   background: linear-gradient(
     270deg,
     #000000,
@@ -61,10 +9,14 @@ body {
   );
   background-size: 600% 600%;
   animation: gradientFlow 25s ease infinite;
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
