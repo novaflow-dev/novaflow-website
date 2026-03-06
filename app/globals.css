@@ -3,13 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --accent: #00f0ff;       /* Bleu néon principal */
-  --accent-hover: #00d4ff; /* Légèrement plus clair au hover */
+  --accent: #00f0ff;          /* Bleu néon vif */
+  --accent-hover: #00d4ff;    /* Hover plus clair */
   --text-primary: #ffffff;
-  --text-secondary: #a0a0ff; /* Gris-bleu clair pour sous-titres */
+  --text-secondary: #e0f7ff;  /* Gris-bleu clair */
+  --bg-dark: #000000;
+  --bg-darker: #0a0a0a;
 }
 
-.bg-accent { background-color: var(--accent); }
+body {
+  @apply bg-[var(--bg-dark)] text-white;
+}
+
+/* Typewriter animation */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid var(--accent);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: 
+    typing 4s steps(40, end) forwards,
+    blink-caret 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent); }
+}
+
+/* Utilitaires accent */
 .text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
 .border-accent { border-color: var(--accent); }
 .hover\:bg-accent-hover:hover { background-color: var(--accent-hover); }
