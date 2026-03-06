@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col animated-gradient-bg">
+    <div className="flex flex-col min-h-screen relative">
       {/* Header minimal */}
       <header className="fixed top-0 w-full z-50 py-6 px-6 md:px-12 flex justify-between items-center bg-black/30 backdrop-blur-md border-b border-gray-900/50">
         <div className="text-3xl font-bold tracking-tight">
@@ -82,7 +82,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nouvelle section: What We Do */}
+        {/* What We Do */}
         <section className="py-24 px-6 bg-black/40">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-5xl md:text-6xl font-bold text-center mb-16">
@@ -111,14 +111,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nouvelle section: Featured Projects (teasers) */}
+        {/* Featured Projects */}
         <section className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-5xl md:text-6xl font-bold text-center mb-16">
               Featured <span className="text-accent">Work</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {/* Carte projet 1 */}
               <div className="group relative overflow-hidden rounded-3xl border border-gray-800 hover:border-accent transition-all duration-300">
                 <div className="aspect-video bg-gray-900/80 flex items-center justify-center">
                   <p className="text-gray-500 text-2xl">Project 1</p>
@@ -129,7 +128,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Carte projet 2 */}
               <div className="group relative overflow-hidden rounded-3xl border border-gray-800 hover:border-accent transition-all duration-300">
                 <div className="aspect-video bg-gray-900/80 flex items-center justify-center">
                   <p className="text-gray-500 text-2xl">Project 2</p>
@@ -140,7 +138,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Carte projet 3 */}
               <div className="group relative overflow-hidden rounded-3xl border border-gray-800 hover:border-accent transition-all duration-300">
                 <div className="aspect-video bg-gray-900/80 flex items-center justify-center">
                   <p className="text-gray-500 text-2xl">Project 3</p>
@@ -159,7 +156,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nouvelle section: Why Choose Us */}
+        {/* Why Choose Us */}
         <section className="py-24 px-6 bg-black/40">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold mb-16">
