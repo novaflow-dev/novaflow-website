@@ -1,8 +1,7 @@
 const nextConfig = {
+  experimental: {
+    turbopack: {},
+  },
 };
 
-const withNextIntl = require('next-intl/plugin')(
-  './i18n.ts' 
-);
-
-module.exports = withNextIntl(nextConfig);
+export default nextConfig;
