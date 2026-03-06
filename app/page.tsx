@@ -3,24 +3,21 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header minimal */}
       <header className="fixed top-0 w-full z-50 py-6 px-6 md:px-12 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-gray-900/50">
         <div className="text-3xl font-bold tracking-tight">
           <span className="text-accent">Nova</span>Flow
         </div>
-        {/* Menu futur : on ajoutera plus tard */}
       </header>
 
-      {/* Hero principal */}
       <main className="flex-1 flex items-center justify-center px-6 pt-20">
         <div className="text-center max-w-5xl">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 typewriter">
-            Ignite Your Digital Future
-          </h1>
+<h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 typewriter">
+  Ignite the Future
+</h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Crafting blazing-fast websites, custom applications & AI-driven experiences that push boundaries and captivate audiences.
-          </p>
+<p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+  High-performance sites, custom apps & AI experiences that stand out.
+</p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
