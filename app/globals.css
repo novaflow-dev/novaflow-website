@@ -1,21 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #00f0ff;
+  --color-accent-hover: #00d4ff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0f7ff;
+  --color-bg-dark: #000000;
+  --color-bg-darker: #0a0a0a;
+}
 
 :root {
-  --accent: #00f0ff;          /* Bleu néon vif */
-  --accent-hover: #00d4ff;    /* Hover plus clair */
-  --text-primary: #ffffff;
-  --text-secondary: #e0f7ff;  /* Gris-bleu clair */
-  --bg-dark: #000000;
-  --bg-darker: #0a0a0a;
+  --accent: var(--color-accent);
+  --accent-hover: var(--color-accent-hover);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --bg-dark: var(--color-bg-dark);
+  --bg-darker: var(--color-bg-darker);
 }
 
 body {
-  @apply bg-[var(--bg-dark)] text-white;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
 }
 
-/* Typewriter animation */
 .typewriter {
   overflow: hidden;
   border-right: 0.15em solid var(--accent);
@@ -37,7 +44,6 @@ body {
   50% { border-color: var(--accent); }
 }
 
-/* Utilitaires accent */
 .text-accent { color: var(--accent); }
 .bg-accent { background-color: var(--accent); }
 .border-accent { border-color: var(--accent); }
