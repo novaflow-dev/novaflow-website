@@ -48,3 +48,23 @@ body {
 .bg-accent { background-color: var(--accent); }
 .border-accent { border-color: var(--accent); }
 .hover\:bg-accent-hover:hover { background-color: var(--accent-hover); }
+
+/* Animated gradient background – subtle neon flow */
+.animated-gradient-bg {
+  background: linear-gradient(
+    270deg,
+    #000000,
+    #001020,
+    #002040,
+    #001020,
+    #000000
+  );
+  background-size: 600% 600%;
+  animation: gradientFlow 25s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
