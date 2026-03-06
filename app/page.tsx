@@ -2,50 +2,86 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen flex flex-col">
       {/* Header minimal */}
-      <header className="fixed top-0 w-full z-50 py-6 px-8 md:px-12 flex justify-between items-center">
-        <div className="text-2xl font-bold tracking-tight">
-          <span className="text-blue-500">Nova</span>Flow
+      <header className="fixed top-0 w-full z-50 py-6 px-6 md:px-12 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-gray-900/50">
+        <div className="text-3xl font-bold tracking-tight">
+          <span className="text-accent">Nova</span>Flow
         </div>
-        {/* Tu pourras ajouter un menu plus tard */}
+        {/* Menu futur : on ajoutera plus tard */}
       </header>
 
-      {/* Hero principal – très centré */}
-      <main className="flex-1 flex items-center justify-center px-6">
-        <div className="text-center max-w-4xl">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6">
-            Une nouvelle ère du digital
+      {/* Hero principal */}
+      <main className="flex-1 flex items-center justify-center px-6 pt-20">
+        <div className="text-center max-w-5xl">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 typewriter">
+            Ignite Your Digital Future
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
-            Studio créatif spécialisé en sites web performants, applications sur mesure et expériences digitales qui marquent.
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Crafting blazing-fast websites, custom applications & AI-driven experiences that push boundaries and captivate audiences.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition text-lg"
+              className="px-10 py-5 bg-accent text-black font-semibold rounded-full text-lg hover:bg-accent-hover transition shadow-lg shadow-accent/30"
             >
-              Prendre contact
+              Get in Touch
             </Link>
             <Link
-              href="/projets"
-              className="px-8 py-4 border border-gray-700 hover:border-gray-400 text-white rounded-full font-medium transition text-lg"
+              href="/projects"
+              className="px-10 py-5 border-2 border-accent text-accent font-semibold rounded-full text-lg hover:bg-accent hover:text-black transition"
             >
-              Voir les projets
+              Explore Projects
             </Link>
           </div>
 
-          <p className="mt-16 text-gray-500 text-sm">
-            Site en construction • Lancement prévu bientôt
-          </p>
+          {/* Coming Soon section */}
+          <div className="max-w-2xl mx-auto">
+            <p className="text-2xl font-medium text-gray-200 mb-8">Launching Very Soon – Stay Tuned!</p>
+            
+            {/* Countdown statique (exemple) */}
+            <div className="flex justify-center gap-10 md:gap-16 mb-12">
+              <div className="text-center">
+                <div className="text-6xl md:text-7xl font-bold text-accent">14</div>
+                <p className="text-sm text-gray-500 uppercase tracking-wider">Days</p>
+              </div>
+              <div className="text-center">
+                <div className="text-6xl md:text-7xl font-bold text-accent">08</div>
+                <p className="text-sm text-gray-500 uppercase tracking-wider">Hours</p>
+              </div>
+              <div className="text-center">
+                <div className="text-6xl md:text-7xl font-bold text-accent">37</div>
+                <p className="text-sm text-gray-500 uppercase tracking-wider">Mins</p>
+              </div>
+            </div>
+
+            {/* Formulaire notify me */}
+            <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-6 py-5 bg-gray-900/70 border border-gray-700 rounded-full text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
+                required
+              />
+              <button
+                type="submit"
+                className="px-10 py-5 bg-accent text-black font-semibold rounded-full hover:bg-accent-hover transition shadow-lg shadow-accent/20"
+              >
+                Notify Me
+              </button>
+            </form>
+            <p className="mt-4 text-sm text-gray-600">
+              We promise no spam – just exciting updates.
+            </p>
+          </div>
         </div>
       </main>
 
-      {/* Footer simple */}
-      <footer className="py-8 text-center text-gray-600 text-sm border-t border-gray-900">
-        <p>© {new Date().getFullYear()} NovaFlow. Tous droits réservés.</p>
+      {/* Footer */}
+      <footer className="py-10 text-center text-gray-600 border-t border-gray-900/50">
+        <p>&copy; {new Date().getFullYear()} NovaFlow. All rights reserved.</p>
       </footer>
     </div>
   );
